@@ -1,2 +1,4 @@
 ocrgptvenv
 api_key.json
+config.json
+__pycache__/
