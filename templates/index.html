@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <link rel= "stylesheet" type="text/css" href="{{ url_for('static', filename='css/main .css') }}  ">
+</head>
+<body>
+    <h1>Welcome to my website</h1>
+    <div id="dash-container">
+        {% with dash_app.get_asset_url('dash.css') as url %}
+            <link rel="stylesheet" type="text/css" href="{ url }">
+        {% endwith %}
+        <div id="dash-content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>
